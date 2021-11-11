@@ -15,6 +15,7 @@ import java.util.HashMap;
  */
 @Slf4j
 @SpringBootTest
+//@RunWith(SpringRunner.class)
 public class WebServiceApiTest {
 
     /**
@@ -24,8 +25,9 @@ public class WebServiceApiTest {
     public void webServiceSoap(){
         HashMap<String,Object> params = new HashMap<>();
         SoapClient client =  SoapClient.create("http://xxx/onews.asmx")
-                .setMethod("MethodName")
-                .setParams(params);
+                .setMethod("web:Method","namespaceURI")
+                .setParams(params,false);
         log.info("测试数据->{}",client.send(true));
     }
+
 }
