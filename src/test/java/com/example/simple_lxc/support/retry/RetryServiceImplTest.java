@@ -1,6 +1,8 @@
 package com.example.simple_lxc.support.retry;
 
 import lombok.extern.slf4j.Slf4j;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +21,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 @RunWith(SpringRunner.class)
 class RetryServiceImplTest {
 
+    private static final Logger logger = LogManager.getRootLogger();
+
     @Autowired
     RetryService retryService;
 
@@ -30,5 +34,11 @@ class RetryServiceImplTest {
     @Test
     void doRetryTask() {
         retryService.doTask("retry");
+    }
+
+    @Test
+    void test1(){
+        String userName = "userName";
+        logger.info("Hello,{}!",new Exception(userName));
     }
 }
