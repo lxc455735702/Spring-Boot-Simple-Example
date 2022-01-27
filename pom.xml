@@ -13,9 +13,13 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>simple_lxc</name>
     <description>Demo project for Spring Boot</description>
+
     <properties>
         <java.version>11</java.version>
+        <hutool.version>5.7.16</hutool.version>
     </properties>
+
+    <dependencyManagement>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -43,9 +47,8 @@
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
-            <version>5.7.16</version>
+            <version>${hutool.version}</version>
         </dependency>
-
 
         <!-- soap -->
         <dependency>
@@ -82,6 +85,8 @@
         <!-- retry -->
 
     </dependencies>
+
+    </dependencyManagement>
 
     <build>
         <plugins>
