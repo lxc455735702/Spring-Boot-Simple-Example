@@ -4,3 +4,13 @@ custom-executor-config:
     queueCapacity: 20
     keepAliveSeconds: 60
     threadNamePrefix: lxcPool-
+spring:
+   data:
+      mongodb:
+        port: 27017
+        host: 192.168.26.128
+        authentication-database: test
+        username: "testuser"
+        password: "123456"
+
+
